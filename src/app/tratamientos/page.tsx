@@ -2,6 +2,7 @@
 import React from "react";
 import Header from "../components/header";
 import Footer from "../components/footer";
+import Link from "next/link";
 import { tratamientos } from "../tratamientos.js";
 
 export default function TratamientosPage() {
@@ -106,12 +107,13 @@ export default function TratamientosPage() {
                     </div>
 
                     {/* CTA Button */}
-                    <button
-                      className={`w-full py-4 rounded-2xl font-semibold bg-gradient-to-r ${tratamiento.color} text-white transform group-hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl relative overflow-hidden`}
+                    <Link
+                      href="/contacto"
+                      className={`w-full py-4 rounded-2xl font-semibold bg-gradient-to-r ${tratamiento.color} text-white transform group-hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl relative overflow-hidden block text-center`}
                     >
                       <span className="relative z-10">Agendar Consulta</span>
                       <div className="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-                    </button>
+                    </Link>
                   </div>
 
                   {/* Decorative Elements */}
